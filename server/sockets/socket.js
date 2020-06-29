@@ -35,5 +35,9 @@ io.on('connection', (client) => {
 
         let atenderTicket = ticketControl.atenderTicket(data.escritorio);
         callback(atenderTicket);
+
+        client.broadcast.emit('actualizarUltimosCuatro', {
+            ultimosCuatro: ticketControl.getUltimosCuatroTickets()
+        });
     });
 });
