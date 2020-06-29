@@ -1,7 +1,7 @@
 var socket = io();
 
-var lblsTickets = [$('#lblTicket1'), $('#lblTicket2'), $('#lblTicket3'), $('#lblTicket4')]
-var lblsEscritorios = [$('#lblEscritorio1'), $('#lblEscritorio2'), $('#lblEscritorio3'), $('#lblEscritorio4')]
+var lblsTickets = [$('#lblTicket1'), $('#lblTicket2'), $('#lblTicket3'), $('#lblTicket4')];
+var lblsEscritorios = [$('#lblEscritorio1'), $('#lblEscritorio2'), $('#lblEscritorio3'), $('#lblEscritorio4')];
 
 socket.on('estadoActual', function(data) {
     actualizarHTML(data.ultimosCuatro);
